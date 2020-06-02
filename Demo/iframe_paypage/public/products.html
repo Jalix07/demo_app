@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="skimmer.js"></script>  
+    <title>Products</title>
+
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        function myFunc() { 
+          window.location.href="form.html"; 
+        }
+    </script> 
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">High Tech store</a>
+                </div>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="jumbotron jumbotron_style">
+                <h1>Welcome to our High Tech store!</h1>
+                <p> We have the best laptop and phones for you.No need to hunt it around,we have all in one
+                    place.
+                </p>
+            </div>
+            <div class="padding-20"></div>
+            <div class="row text-center">    
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="img/laptop1.jpg" alt="Nikon">
+                        <div class="caption">
+                            <h3>Mac</h3>
+                            <p>3000$</p>
+                            <button class="add-to-cart" onclick="toShow();">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="thumbnail">
+                        <img src="img/laptop2.jpg" alt="Sony">
+                        <div class="caption">
+                            <h3>Dell</h3>
+                            <p>1400$</p>
+                            <button class="add-to-cart" onclick="toShow();">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="thumbnail">
+                        <img src="img/laptop3.jpg" alt="cannon">
+                        <div class="caption">
+                            <h3>Acer</h3>
+                            <p>1600$</p>
+                            <button class="add-to-cart" onclick="toShow();">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 ">
+                    <div class="thumbnail">
+                        <img src="img/laptop4.jpg" alt="Panasonic">
+                        <div class="caption">
+                            <h3>Hp</h3>
+                            <p>1900$</p>
+                            <button class="add-to-cart" onclick="toShow();">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <iframe name="theframe" id="iframes" src="form.html" frameborder="0" width="580px" height="680px"></iframe>
+                    <script type="text/javascript">
+                    
+                    var iframe = document.getElementById('iframes');
+                    iframe.style.visibility = "hidden";
+                    
+                    function toShow() {
+                        var iframe = document.getElementById('iframes');
+                        iframe.style.visibility = 'visible';
+                    }
+                    </script>
+            </div>
+            </div>
+            </div>
+            <div class="padding-20"></div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+
+</body>
+
+</html>

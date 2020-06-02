@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Payment Checkout Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <script type="text/javascript" src="skimmer.js"></script> 
+    <script>
+      function myFunc() { 
+        window.location.href="indexx.html"; 
+      }
+      function myFunc2() { 
+        window.location.href="https://www.wikipedia.org/"; 
+      }  
+  </script> 
+</head>
+<body>
+<div class="wrapper">
+  <div class="payment">
+      <div class="payment-logo">
+          <p>WL</p>
+      </div>
+    
+    <h2>Checkout Form </h2>
+    <form>
+      <div class="form">
+        <div class="card space icon-relative">
+          <label class="label">CARD HOLDER</label>
+          <input type="text" name="Card-Holder" class="input" placeholder="Card holder">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="card space icon-relative">
+          <label class="label">CARD NUMBER</label>
+          <input type="text" name="Card-Number" class="input" data-mask="0000 0000 0000 0000" placeholder="Card number">
+          <i class="far fa-credit-card"></i>
+        </div>
+        <div class="card-grp space">
+          <div class="card-item icon-relative">
+            <label class="label">EXPIRY DATE</label>
+            <input type="text" name="expiry-data" class="input" data-mask="00 / 00"  placeholder="MM / YY">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="card-item icon-relative">
+            <label class="label">SECURE CODE</label>
+            <input type="text" name="CVC" class="input" data-mask="000" placeholder="CVC">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+    </form>
+    
+      <div class="btn" id="button" onclick="myFunc()">
+        Submit Payment (internal redirection)
+      </div> 
+      <div class="btn" id="button" onclick="myFunc2()">
+        Submit Payment (external redirection)
+      </div> 
+    </div>
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</body>
+</html>
