@@ -2,12 +2,12 @@
    "background": {
       "scripts": [  "background.js" ]
    },
-   "description": "Allows the users to modify requests as they happen.",
+   "description": "Allow and block requests",
    "devtools_page": "devtools.html",
    "manifest_version": 2,
-   "name": "Tamper Chrome (extension)",
+   "name": "Chrome extension",
    "permissions": [ "webRequest", "webRequestBlocking", "webNavigation", "tabs", "http://*/*", "https://*/*", "debugger" ],
    "version": "1.3.3.1",
-   "web_accessible_resources": ["tamper-16.png"],
-   "icons": { "16": "r_tamper-16.png", "48": "r_tamper-48.png", "128": "r_tamper-128.png" }
+   "web_accessible_resources": ["icon-16.png"],
+   "icons": { "16": "r_icon-16.png", "48": "r_icon-48.png", "128": "r_icon-128.png" }
 }

@@ -108,7 +108,7 @@ chrome.webRequest.onBeforeRequest.addListener(
   },
   ["blocking", "requestBody"]);
 
-// handle messages from the devtools area (tamper.js)
+// handle messages from the devtools area 
 chrome.extension.onConnect.addListener(function(port){
   port.onMessage.addListener(function(msg) {
     if (config.hasOwnProperty(msg.key)) {

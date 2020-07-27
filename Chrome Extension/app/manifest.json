@@ -1,6 +1,6 @@
 {
-  "name": "Tamper Chrome (application)",
-  "description": "Intercept and modify Chrome requests",
+  "name": "chrome application",
+  "description": "allow and block Chrome requests",
   "version": "1.3.3",
   "manifest_version": 2,
   "app": {
@@ -8,7 +8,7 @@
       "scripts": ["background.js"]
     }
   },
-  "icons": { "16": "tamper-16.png", "48": "tamper-48.png", "128": "tamper-128.png" },
+  "icons": { "16": "icon-16.png", "48": "icon-48.png", "128": "icon-128.png" },
   "permissions": [
     {"socket":["tcp-connect", "tcp-listen"]},
     "clipboardWrite"

@@ -1,4 +1,4 @@
 
 
 // TODO: High-level file comment.
-chrome.devtools.panels.create("Tamper", "tamper-16.png", "tamper.html", function(panel){});
+chrome.devtools.panels.create("Block Requests", "icon-16.png", "app.html", function(panel){});

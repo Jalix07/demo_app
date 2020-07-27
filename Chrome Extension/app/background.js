@@ -53,7 +53,7 @@ var sendResponse = function(socketId, value) {
   var header = stringToUint8Array(
       "HTTP/1.0 200 OK\nAccess-Control-Allow-Origin: *\nContent-length: " +
       contentLength + "\nContent-type:" + contentType + "\n\n");
-  var content = stringToUint8Array(value)
+  //var content = stringToUint8Array(value)
   var outputBuffer = new ArrayBuffer(header.byteLength + contentLength);
 
   var view = new Uint8Array(outputBuffer)
@@ -65,7 +65,6 @@ var sendResponse = function(socketId, value) {
 };
 
 var readFromSocket = function(socketId) {
-
   var headers = '';
   var content = '';
   var totalContentLength;
@@ -120,7 +119,7 @@ var readFromSocket = function(socketId) {
       if (uri == '/hello') {
         sendResponse(socketId, 'Hello');
       } else {
-        sendResponse(socketId, 'I have no idea what you\'re talking about');
+      sendResponse(socketId, 'I have no idea what you\'re talking about');
       }
       socket.accept(socketInfo.socketId, onAccept);
     } else
@@ -188,7 +187,7 @@ var endRequest = function(socketId, request, retval, debug) {
   // send a response to both sockets
   sendResponse(request.socketId, JSON.stringify(retval));
   if (socketId) {
-    sendResponse(socketId, 'Responded to request '+request.reqId);
+    sendResponse(socketId, 'Responded to request'+ request.reqId);
   }
   // mark the request as completed
   request.completed = true;

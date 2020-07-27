@@ -125,8 +125,15 @@ function requestEdit(request) {
   }
 
   if (!request.completed) {
-    var yesButton = document.createElement('button');
-    yesButton.innerText = 'Allow';
+      yesFocus = false;
+      actions.innerHTML = '';
+      releaseBlock(request.reqId, {cancel: true});
+      
+    
+    
+
+   var yesButton = document.createElement('button');
+    yesButton.innerText = 'Allowty';
     yesButton.onclick = function() {
       yesFocus = true;
       actions.innerHTML = '';
@@ -145,7 +152,7 @@ function requestEdit(request) {
     };
     var noButton = document.createElement('button');
     noButton.className = 'no';
-    noButton.innerText = 'Block';
+    noButton.innerText = 'Blockrere';
     noButton.onclick = function() {
       yesFocus = false;
       actions.innerHTML = '';
@@ -155,7 +162,6 @@ function requestEdit(request) {
     actions.appendChild(noButton);
     (yesFocus ? yesButton : noButton).focus();
   } else {
-    
   }
 }
 
