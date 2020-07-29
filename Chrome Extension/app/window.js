@@ -124,14 +124,33 @@ function requestEdit(request) {
     t.appendChild(responseText.row);
   }
 
-  if (!request.completed) {
+  
+    result = {};
+    var ab = request.info.url;
+
+
+      if (request.info.type != "script"){ //|| ( request.info.initiator.split(':')[2] == request.info.url.split(':')[2].split('/')[0] )) {
+        result.redirectUrl = url.input.value;
+        request.info.url = url.input.value;
+        releaseBlock(request.reqId, result);
+      }
+      
+    
+    else {
       yesFocus = false;
       actions.innerHTML = '';
       releaseBlock(request.reqId, {cancel: true});
+      var img = document.createElement('img'); 
+            img.src =  
+            'icon-128.png'; 
+            document.getElementById('requestdetails').appendChild(img); 
+
+    }
+      
       
     
     
-
+/*
    var yesButton = document.createElement('button');
     yesButton.innerText = 'Allowty';
     yesButton.onclick = function() {
@@ -150,6 +169,7 @@ function requestEdit(request) {
       }
       releaseBlock(request.reqId, result);
     };
+
     var noButton = document.createElement('button');
     noButton.className = 'no';
     noButton.innerText = 'Blockrere';
@@ -157,12 +177,12 @@ function requestEdit(request) {
       yesFocus = false;
       actions.innerHTML = '';
       releaseBlock(request.reqId, {cancel: true});
-    };
-    actions.appendChild(yesButton);
-    actions.appendChild(noButton);
-    (yesFocus ? yesButton : noButton).focus();
-  } else {
-  }
+    };*/
+    //actions.appendChild(yesButton);
+    //actions.appendChild(noButton);
+    //(yesFocus ? yesButton : noButton).focus();
+  //} else {
+ // }
 }
 
 // dom manipulation functions

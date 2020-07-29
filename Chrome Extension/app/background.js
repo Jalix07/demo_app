@@ -205,8 +205,8 @@ var forceLaunchApp = function(extraArgs) {
   chrome.app.window.create('window.html?'+extraArgs, {
     'id': 'UI',
     'bounds': {
-      'width': 900,
-      'height': 900
+      'width': 300,
+      'height': 300
     }
   }, function(createdWindow) {
     uiWindow = createdWindow;

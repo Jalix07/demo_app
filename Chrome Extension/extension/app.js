@@ -86,7 +86,7 @@ onload = function() {
         tabId: tabId,
         key: checkbox.getAttribute('data-category'),
         value: checkbox.checked});
-      toggleDevToolsHelper(features[checkbox.getAttribute('data-number')]);
+      //toggleDevToolsHelper(features[checkbox.getAttribute('data-number')]);
     //}
     // handle options pane
    /* switch (features[i].category) {
